@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zs8WC+r9gqQ=",
+  "success": true,
+  "projectFilePath": "C:\\Contents\\Projects\\Angular\\YborArchives\\YborArchives.Server\\YborArchives.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AnotherGuy\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnotherGuy\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\9.0.7\\microsoft.aspnetcore.spaproxy.9.0.7.nupkg.sha512",
+    "C:\\Users\\AnotherGuy\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

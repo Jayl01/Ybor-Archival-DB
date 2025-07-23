@@ -1,0 +1,19 @@
+# Visual Studio / VS Code
+**/.vs/
+.vs/
+**/.vscode/*
+!**/.vscode/extensions.json
+!**/.vscode/launch.json
+!**/.vscode/tasks.json
+
+# Visual Studio solution/project files
+**/*.sln
+**/*.esproj.user
+**/*.pyproj.user
+
+# Node.js
+**/node_modules/
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
