@@ -106,31 +106,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AnotherGuy\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/cool/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Contents\\Projects\\Angular\\YborArchives\\YborArchives.Server\\YborArchives.Server.csproj",
+      "projectUniqueName": "/Users/cool/Documents/GitHub/Ybor-Archival-DB/YborArchives.Server/YborArchives.Server.csproj",
       "projectName": "YborArchives.Server",
-      "projectPath": "C:\\Contents\\Projects\\Angular\\YborArchives\\YborArchives.Server\\YborArchives.Server.csproj",
-      "packagesPath": "C:\\Users\\AnotherGuy\\.nuget\\packages\\",
-      "outputPath": "C:\\Contents\\Projects\\Angular\\YborArchives\\YborArchives.Server\\obj\\",
+      "projectPath": "/Users/cool/Documents/GitHub/Ybor-Archival-DB/YborArchives.Server/YborArchives.Server.csproj",
+      "packagesPath": "/Users/cool/.nuget/packages/",
+      "outputPath": "/Users/cool/Documents/GitHub/Ybor-Archival-DB/YborArchives.Server/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\AnotherGuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/cool/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -183,7 +176,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:57562",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Contents\\Projects\\Angular\\YborArchives\\YborArchives.Server\\..\\yborarchives.client",
+"WorkingDirectory": "/Users/cool/Documents/GitHub/Ybor-Archival-DB/YborArchives.Server/../yborarchives.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

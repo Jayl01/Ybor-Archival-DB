@@ -1,1 +1,52 @@
-<p>artifact-preview works!</p>
+<h1>{{ data["title"] }}</h1>
+
+<img src="{{image}}" />
+
+<table class="table-auto">
+  <tbody>
+    <tr>
+      <td>Accession</td>
+      <td>{{ data["accession"] }} </td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>{{ data["description"] }} </td>
+    </tr>
+    <tr>
+      <td>Subject</td>
+      <td>{{ data["subject"] }} </td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>{{ data["location"] }} </td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>{{ data["date"] }} </td>
+    </tr>
+    <tr>
+      <td>Created By</td>
+      <td>{{ data["created by"] }} </td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>{{ data["size"] }} </td>
+    </tr>
+    <tr>
+      <td>Condition</td>
+      <td>{{ data["condition"] }} </td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>{{ data["status"] }} </td>
+    </tr>
+    <tr>
+      <td>Donated By</td>
+      <td>{{ data["donated by"] }} </td>
+    </tr>
+    <tr>
+      <td>Notes</td>
+      <td>{{ data["notes"] }} </td>
+    </tr>
+  </tbody>
+</table>
