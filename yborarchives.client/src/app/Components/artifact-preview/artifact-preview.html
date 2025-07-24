@@ -1,52 +1,54 @@
-<h1>{{ data["title"] }}</h1>
+<div class="flex flex-col shadow-lg w-200 gap-9 p-5">
+  <h1 class="text-2xl font-semibold">{{ data["title"] }}</h1>
 
-<img src="{{image}}" />
+  <img class="h-70 object-contain" src="{{image}}" />
 
-<table class="table-auto">
-  <tbody>
-    <tr>
-      <td>Accession</td>
-      <td>{{ data["accession"] }} </td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td>{{ data["description"] }} </td>
-    </tr>
-    <tr>
-      <td>Subject</td>
-      <td>{{ data["subject"] }} </td>
-    </tr>
-    <tr>
-      <td>Location</td>
-      <td>{{ data["location"] }} </td>
-    </tr>
-    <tr>
-      <td>Date</td>
-      <td>{{ data["date"] }} </td>
-    </tr>
-    <tr>
-      <td>Created By</td>
-      <td>{{ data["created by"] }} </td>
-    </tr>
-    <tr>
-      <td>Size</td>
-      <td>{{ data["size"] }} </td>
-    </tr>
-    <tr>
-      <td>Condition</td>
-      <td>{{ data["condition"] }} </td>
-    </tr>
-    <tr>
-      <td>Status</td>
-      <td>{{ data["status"] }} </td>
-    </tr>
-    <tr>
-      <td>Donated By</td>
-      <td>{{ data["donated by"] }} </td>
-    </tr>
-    <tr>
-      <td>Notes</td>
-      <td>{{ data["notes"] }} </td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table-auto  ">
+    <tbody>
+      <tr>
+        <td>Accession</td>
+        <td class="text-left">{{ data["accession"] }} </td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td class="text-left">{{ data["description"] }} </td>
+      </tr>
+      <tr>
+        <td>Subject</td>
+        <td class="text-left">{{ data["subject"] }} </td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td class="text-left">{{ data["location"] }} </td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td class="text-left">{{ data["date"] }} </td>
+      </tr>
+      <tr>
+        <td>Created By</td>
+        <td class="text-left">{{ data["created by"] }} </td>
+      </tr>
+      <tr>
+        <td>Size</td>
+        <td class="text-left">{{ data["size"] }} </td>
+      </tr>
+      <tr>
+        <td>Condition</td>
+        <td class="text-left">{{ data["condition"] }} </td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td class="text-left">{{ data["status"] }} </td>
+      </tr>
+      <tr>
+        <td>Donated By</td>
+        <td class="text-left">{{ data["donated by"] }} </td>
+      </tr>
+      <tr>
+        <td>Notes</td>
+        <td class="text-left">{{ data["notes"] }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

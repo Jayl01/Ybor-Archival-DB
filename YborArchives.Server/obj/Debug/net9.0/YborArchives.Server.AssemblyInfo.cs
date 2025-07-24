@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YborArchives.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee9d0e1ae30f2ec0000b9d495b810a0a46404fed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cbaadacac527782ff4945f54794c08974505657")]
 [assembly: System.Reflection.AssemblyProductAttribute("YborArchives.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YborArchives.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
