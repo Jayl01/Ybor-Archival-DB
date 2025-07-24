@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YborArchives.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb21190561d1f9f8c60b9ba39aa0a9a58817da56")]
 [assembly: System.Reflection.AssemblyProductAttribute("YborArchives.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YborArchives.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

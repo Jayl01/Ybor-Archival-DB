@@ -7,8 +7,4 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\yborarchives.client\browser\</BuildOutputFolder>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="src\app\Components\CustomBox\" />
-    <Folder Include="src\app\Pages\" />
-  </ItemGroup>
 </Project>

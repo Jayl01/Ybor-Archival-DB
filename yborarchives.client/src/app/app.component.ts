@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import Searchbar from './Components/SearchBar/Searchbar'
+import { Searchbar } from './Components/SearchBar/Searchbar'
 import "tailwindcss";
 
 interface WeatherForecast {
@@ -11,15 +11,13 @@ interface WeatherForecast {
 }
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  standalone: false,
   styleUrl: './app.component.css',
-  imports: [
-    Searchbar,
-  ],
+  imports: [Searchbar]
 })
-export class AppComponent implements OnInit {
+export class MainAppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
 
   constructor(private http: HttpClient) {}

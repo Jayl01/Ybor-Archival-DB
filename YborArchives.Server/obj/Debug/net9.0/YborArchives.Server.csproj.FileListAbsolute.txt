@@ -34,3 +34,4 @@ C:\Contents\Projects\Angular\YborArchives\YborArchives.Server\obj\Debug\net9.0\r
 C:\Contents\Projects\Angular\YborArchives\YborArchives.Server\obj\Debug\net9.0\YborArchives.Server.pdb
 C:\Contents\Projects\Angular\YborArchives\YborArchives.Server\obj\Debug\net9.0\YborArchives.Server.genruntimeconfig.cache
 C:\Contents\Projects\Angular\YborArchives\YborArchives.Server\obj\Debug\net9.0\ref\YborArchives.Server.dll
+C:\Contents\Projects\Angular\YborArchives\YborArchives.Server\obj\Debug\net9.0\YborArchives.Server.sourcelink.json

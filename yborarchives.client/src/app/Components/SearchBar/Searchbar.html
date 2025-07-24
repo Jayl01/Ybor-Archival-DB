@@ -1,8 +1,3 @@
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <label>Search anything here...</label>
-  <button class="button" type="submit">Purchase</button>
-  <label for="name">
-    Name
-  </label>
-  <input id="name" type="text" formControlName="name">
-</form>
+  <input class="mt-[50%] w-200" type="text" id="searchbar" [(ngModel)]="searchName">
+  <button class="button" type="submit" placeholder="Enter information" (click)="onSubmit()">Search</button>
+  <h1>{{ searchName }}</h1>
