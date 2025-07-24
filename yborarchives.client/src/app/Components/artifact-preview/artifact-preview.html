@@ -1,7 +1,14 @@
 <div class="flex flex-col shadow-lg w-200 gap-9 p-5">
   <h1 class="text-2xl font-semibold">{{ data["title"] }}</h1>
 
-  <img class="h-70 object-contain" src="{{image}}" />
+  <div class="flex justify-center  gap-5">
+    @for (photo of data["image_links"]; track photo) {
+
+    <img class="h-70 place-content-center" src="{{photo}}" />
+    }
+
+  </div>
+
 
   <table class="table-auto  ">
     <tbody>
@@ -27,7 +34,7 @@
       </tr>
       <tr>
         <td>Created By</td>
-        <td class="text-left">{{ data["created by"] }} </td>
+        <td class="text-left">{{ data["createdBy"] }} </td>
       </tr>
       <tr>
         <td>Size</td>
@@ -43,11 +50,21 @@
       </tr>
       <tr>
         <td>Donated By</td>
-        <td class="text-left">{{ data["donated by"] }} </td>
+        <td class="text-left">{{ data["donatedBy"] }} </td>
       </tr>
       <tr>
         <td>Notes</td>
-        <td class="text-left">{{ data["notes"] }} </td>
+        <td class="text-left">{{ data["personal_notes"] }} </td>
+      </tr>
+      <tr>
+        <td>PDF Documets</td>
+        <td class="text-left">
+          <ul>
+            @for (link of data["pdf_links"]; track link) {
+            <li><a href="{{link}}">{{ link }}</a></li>
+            }
+          </ul>
+        </td>
       </tr>
     </tbody>
   </table>

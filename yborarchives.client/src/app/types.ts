@@ -8,11 +8,11 @@ export interface Artifact {
   date: string;
   createdBy: string;
   size: string;
-  condition: 'Excellent' | 'Very Good' | 'Medium' | 'Damaed' | 'Unusable';
+  condition: string;
   status: string;
   donatedBy: string;
-  image_link: string;
-  pdf_link: string;
+  image_links: string[];
+  pdf_links: string[];
 }
 
 export function ToPrint()
