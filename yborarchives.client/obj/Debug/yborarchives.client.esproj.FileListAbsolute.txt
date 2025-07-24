@@ -1,1 +1,2 @@
-C:\Contents\Projects\Angular\YborArchives\yborarchives.client\obj\Debug\yborarchives.client.esproj.CoreCompileInputs.cache
+C:/Contents/Projects/Angular/YborArchives/yborarchives.client/obj/Debug/yborarchives.client.esproj.CoreCompileInputs.cache
+/Users/cool/Documents/GitHub/Ybor-Archival-DB/yborarchives.client/obj/Debug/yborarchives.client.esproj.CoreCompileInputs.cache
