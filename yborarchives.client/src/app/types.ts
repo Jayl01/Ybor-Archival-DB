@@ -1,18 +1,18 @@
 export interface Artifact {
-  accession: string;
-  title: string;
-  description: string;
-  personal_notes: string;
-  subject: string[];
-  location: string;
-  date: string;
-  createdBy: string;
-  size: string;
-  condition: string;
-  status: string;
-  donatedBy: string;
-  image_links: string[];
-  pdf_links: string[];
+  Accession: string;
+  Title: string;
+  Description: string;
+  PersonalNotes: string;
+  SubjectHeadings: string[];
+  Location: string;
+  Date: string;
+  CreatedBy: string;
+  Size: string;
+  Condition: string;
+  Status: string;
+  DonatedBy: string;
+  ImageLinks: string[];
+  PdfLinks: string[];
 }
 
 export function ToPrint()

@@ -1,10 +1,10 @@
-<div class="flex flex-col shadow-lg w-200 gap-9 p-5">
-  <h1 class="text-2xl font-semibold">{{ data["title"] }}</h1>
+<div class="flex flex-col shadow-lg w-1/2 gap-9 p-5 fixed inset-1/4 bg-white h-fit rounded-xl border">
+  <h1 class="text-2xl font-semibold">{{ artifact["Title"] }}</h1>
 
   <div class="flex justify-center  gap-5">
-    @for (photo of data["image_links"]; track photo) {
+    @for (photo of artifact["ImageLinks"]; track photo) {
 
-    <img class="h-70 place-content-center" src="{{photo}}" />
+    <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
     }
 
   </div>
@@ -14,53 +14,53 @@
     <tbody>
       <tr>
         <td>Accession</td>
-        <td class="text-left">{{ data["accession"] }} </td>
+        <td class="text-left">{{ artifact["Accession"] }} </td>
       </tr>
       <tr>
         <td>Description</td>
-        <td class="text-left">{{ data["description"] }} </td>
+        <td class="text-left">{{ artifact["Description"] }} </td>
       </tr>
       <tr>
         <td>Subject</td>
-        <td class="text-left">{{ data["subject"] }} </td>
+        <td class="text-left">{{ artifact["SubjectHeadings"] }} </td>
       </tr>
       <tr>
         <td>Location</td>
-        <td class="text-left">{{ data["location"] }} </td>
+        <td class="text-left">{{ artifact["Location"] }} </td>
       </tr>
       <tr>
         <td>Date</td>
-        <td class="text-left">{{ data["date"] }} </td>
+        <td class="text-left">{{ artifact["Date"] }} </td>
       </tr>
       <tr>
         <td>Created By</td>
-        <td class="text-left">{{ data["createdBy"] }} </td>
+        <td class="text-left">{{ artifact["CreatedBy"] }} </td>
       </tr>
       <tr>
         <td>Size</td>
-        <td class="text-left">{{ data["size"] }} </td>
+        <td class="text-left">{{ artifact["Size"] }} </td>
       </tr>
       <tr>
         <td>Condition</td>
-        <td class="text-left">{{ data["condition"] }} </td>
+        <td class="text-left">{{ artifact["Condition"] }} </td>
       </tr>
       <tr>
         <td>Status</td>
-        <td class="text-left">{{ data["status"] }} </td>
+        <td class="text-left">{{ artifact["Status"] }} </td>
       </tr>
       <tr>
         <td>Donated By</td>
-        <td class="text-left">{{ data["donatedBy"] }} </td>
+        <td class="text-left">{{ artifact["DonatedBy"] }} </td>
       </tr>
       <tr>
         <td>Notes</td>
-        <td class="text-left">{{ data["personal_notes"] }} </td>
+        <td class="text-left">{{ artifact["PersonalNotes"] }} </td>
       </tr>
       <tr>
         <td>PDF Documets</td>
         <td class="text-left">
           <ul>
-            @for (link of data["pdf_links"]; track link) {
+            @for (link of artifact["PdfLinks"]; track link) {
             <li><a href="{{link}}">{{ link }}</a></li>
             }
           </ul>
