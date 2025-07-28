@@ -34,22 +34,6 @@ export class Bridge {
       "Attachment": "[jpeg]",
       "Notes": "Broken at the neck of the bottle"
     },
-    "oeo": {
-      "Accession": "oeo",
-      "Title": "Glass Bottle",
-      "Location": "RO_BB1",
-      "SubjectHeadings": "Food, Markets, Medicine",
-      "Description": "Small glass bottle without a cap.",
-      "Date": "1950s",
-      "CreatedBy": "Glass Bottleworks",
-      "Size": "2\"x6\"",
-      "Condition": "Bad",
-      "Status": "Donated",
-      "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": "Broken at the neck of the bottle"
-    },
     "2025.01.002": {
       "Accession": "2025.01.002",
       "Title": "Oral History - John Doe",

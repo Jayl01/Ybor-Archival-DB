@@ -1,71 +1,81 @@
-<div class="flex flex-col shadow-lg w-1/2 gap-9 p-5 fixed inset-1/4 bg-white h-fit rounded-xl border">
-  <h1 class="text-2xl font-semibold">{{ artifact["Title"] }}</h1>
+<div class="bg-gray-100 opacity-50 h-screen w-screen top-0 left-0 fixed transition delay-450 duration-300 ease-in-out"
+  [routerLink]="['../../']">
+</div>
+<div class="shadow-lg w-1/2 gap-9 p-5 fixed inset-1/4 bg-white h-fit rounded-xl border">
+  <div class="flex flex-col ">
+    <h1 class="text-2xl font-semibold">{{ artifact["Title"] }}</h1>
 
-  <div class="flex justify-center  gap-5">
-    @for (photo of artifact["ImageLinks"]; track photo) {
+    <div class="flex justify-center  gap-5">
+      @for (photo of artifact["ImageLinks"]; track photo) {
 
-    <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
-    }
+      <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
+      }
 
+    </div>
+
+
+    <table class="table-auto  ">
+      <tbody>
+        <tr>
+          <td>Accession</td>
+          <td class="text-left">{{ artifact["Accession"] }} </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td class="text-left">{{ artifact["Description"] }} </td>
+        </tr>
+        <tr>
+          <td>Subject</td>
+          <td class="text-left">{{ artifact["SubjectHeadings"] }} </td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td class="text-left">{{ artifact["Location"] }} </td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td class="text-left">{{ artifact["Date"] }} </td>
+        </tr>
+        <tr>
+          <td>Created By</td>
+          <td class="text-left">{{ artifact["CreatedBy"] }} </td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td class="text-left">{{ artifact["Size"] }} </td>
+        </tr>
+        <tr>
+          <td>Condition</td>
+          <td class="text-left">{{ artifact["Condition"] }} </td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td class="text-left">{{ artifact["Status"] }} </td>
+        </tr>
+        <tr>
+          <td>Donated By</td>
+          <td class="text-left">{{ artifact["DonatedBy"] }} </td>
+        </tr>
+        <tr>
+          <td>Notes</td>
+          <td class="text-left">{{ artifact["PersonalNotes"] }} </td>
+        </tr>
+        <tr>
+          <td>PDF Documets</td>
+          <td class="text-left">
+            <ul>
+              @for (link of artifact["PdfLinks"]; track link) {
+              <li><a href="{{link}}">{{ link }}</a></li>
+              }
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-
-  <table class="table-auto  ">
-    <tbody>
-      <tr>
-        <td>Accession</td>
-        <td class="text-left">{{ artifact["Accession"] }} </td>
-      </tr>
-      <tr>
-        <td>Description</td>
-        <td class="text-left">{{ artifact["Description"] }} </td>
-      </tr>
-      <tr>
-        <td>Subject</td>
-        <td class="text-left">{{ artifact["SubjectHeadings"] }} </td>
-      </tr>
-      <tr>
-        <td>Location</td>
-        <td class="text-left">{{ artifact["Location"] }} </td>
-      </tr>
-      <tr>
-        <td>Date</td>
-        <td class="text-left">{{ artifact["Date"] }} </td>
-      </tr>
-      <tr>
-        <td>Created By</td>
-        <td class="text-left">{{ artifact["CreatedBy"] }} </td>
-      </tr>
-      <tr>
-        <td>Size</td>
-        <td class="text-left">{{ artifact["Size"] }} </td>
-      </tr>
-      <tr>
-        <td>Condition</td>
-        <td class="text-left">{{ artifact["Condition"] }} </td>
-      </tr>
-      <tr>
-        <td>Status</td>
-        <td class="text-left">{{ artifact["Status"] }} </td>
-      </tr>
-      <tr>
-        <td>Donated By</td>
-        <td class="text-left">{{ artifact["DonatedBy"] }} </td>
-      </tr>
-      <tr>
-        <td>Notes</td>
-        <td class="text-left">{{ artifact["PersonalNotes"] }} </td>
-      </tr>
-      <tr>
-        <td>PDF Documets</td>
-        <td class="text-left">
-          <ul>
-            @for (link of artifact["PdfLinks"]; track link) {
-            <li><a href="{{link}}">{{ link }}</a></li>
-            }
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="flex flex-row-reverse">
+    <a [routerLink]="['../../']" class="text-red-500 basis-1/5 cursor-pointer">Close</a>
+    <button (click)="editComponent()" class="text-blue-500 cursor-pointer">Edit</button>
+    <router-outlet />
+  </div>
 </div>
