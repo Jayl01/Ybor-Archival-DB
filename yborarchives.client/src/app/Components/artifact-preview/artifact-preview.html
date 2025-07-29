@@ -6,7 +6,7 @@
     <h1 class="text-2xl font-semibold">{{ artifact["Title"] }}</h1>
 
     <div class="flex justify-center  gap-5">
-      @for (photo of artifact["ImageLinks"]; track photo) {
+      @for (photo of artifact["Acquisition"]; track photo) {
 
       <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
       }
@@ -61,10 +61,10 @@
           <td class="text-left">{{ artifact["PersonalNotes"] }} </td>
         </tr>
         <tr>
-          <td>PDF Documets</td>
+          <td>Attachments</td>
           <td class="text-left">
             <ul>
-              @for (link of artifact["PdfLinks"]; track link) {
+              @for (link of artifact["Attachment"]; track link) {
               <li><a href="{{link}}">{{ link }}</a></li>
               }
             </ul>
@@ -75,7 +75,7 @@
   </div>
   <div class="flex flex-row-reverse">
     <a [routerLink]="['../../']" class="text-red-500 basis-1/5 cursor-pointer">Close</a>
-    <button (click)="editComponent()" class="text-blue-500 cursor-pointer">Edit</button>
+    <a [routerLink]="['/artifact-edit', artifact.Accession]" class="text-blue-500 cursor-pointer">Edit</a>
     <router-outlet />
   </div>
 </div>

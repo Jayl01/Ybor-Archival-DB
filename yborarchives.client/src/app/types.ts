@@ -3,7 +3,7 @@ export interface Artifact {
   Title: string;
   Description: string;
   PersonalNotes: string;
-  SubjectHeadings: string[];
+  SubjectHeadings: string;
   Location: string;
   Date: string;
   CreatedBy: string;
@@ -11,8 +11,8 @@ export interface Artifact {
   Condition: string;
   Status: string;
   DonatedBy: string;
-  ImageLinks: string[];
-  PdfLinks: string[];
+  Acquisition: string[];
+  Attachment: string[];
 }
 
 export function ToPrint()

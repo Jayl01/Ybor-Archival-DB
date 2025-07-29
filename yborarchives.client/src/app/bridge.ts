@@ -1,3 +1,5 @@
+import { Artifact } from "./types";
+
 export class Bridge {
 
   // this is just a temporary example. will be replaced by api call 
@@ -217,6 +219,28 @@ export class Bridge {
   constructor() {
   }
 
+  // this method will take in an artifact, which may or may not be new, to be put in the database
+  public updateArtifact(artifact: Artifact) {
+    console.log("the following will be updated to the database", artifact);
+  }
 
+  public getNewArticle(): Artifact {
+    return {
+      "Accession": "",
+      "Title": "",
+      "Location": "",
+      "SubjectHeadings": "",
+      "Description": "",
+      "Date": "",
+      "Size": "",
+      "Condition": "",
+      "Status": "",
+      "DonatedBy": "",
+      "Acquisition": [],
+      "Attachment": [],
+      "CreatedBy": "",
+      "PersonalNotes": ""
+    }
+  };
 
 }

@@ -1,0 +1,97 @@
+<div class="bg-gray-100 opacity-50 h-screen w-screen top-0 left-0 fixed transition delay-450 duration-300 ease-in-out"
+  [routerLink]="['../../']">
+</div>
+<div class="shadow-lg w-1/2 gap-9 p-5 fixed inset-1/4 bg-white h-fit rounded-xl border">
+  <div class="flex flex-col ">
+    <h1 class="text-2xl font-semibold"><input id="Title" [(ngModel)]="artifact.Title" value="{{ artifact.Title }}"
+        class="outline" /></h1>
+
+    <div class="flex justify-center  gap-5">
+      @for (photo of artifact["Acquisition"]; track photo) {
+
+      <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
+      }
+
+    </div>
+
+
+    <table class="table-auto  ">
+      <tbody>
+        <tr>
+          <td>Accession</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Accession" value="{{ artifact.Accession}}"
+              class="outline w-full" /> </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Description" value="{{ artifact.Description}}"
+              class="outline w-full" />
+          </td>
+        </tr>
+        <tr>
+          <td>Subject</td>
+          <td class="text-left"><input [(ngModel)]="artifact.SubjectHeadings" value="{{ artifact.SubjectHeadings}}"
+              class="outline w-full" />
+          </td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Location" value="{{ artifact.Location}}"
+              class="outline w-full" />
+          </td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Date" value="{{ artifact.Date}}" class="outline w-full" />
+          </td>
+        </tr>
+        <tr>
+          <td>Created By</td>
+          <td class="text-left"><input [(ngModel)]="artifact.CreatedBy" value="{{ artifact.CreatedBy}}"
+              class="outline w-full" /> </td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Size" value="{{ artifact.Size}}" class="outline w-full" />
+          </td>
+        <tr>
+          <td>Condition</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Condition" value="{{ artifact.Condition}}"
+              class="outline w-full" /> </td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td class="text-left"><input [(ngModel)]="artifact.Status" value="{{ artifact.Status}}"
+              class="outline w-full" />
+          </td>
+        </tr>
+        <tr>
+          <td>Donated By</td>
+          <td class="text-left"><input [(ngModel)]="artifact.DonatedBy" value="{{ artifact.DonatedBy}}"
+              class="outline w-full" /> </td>
+        </tr>
+        <tr>
+          <td>Notes</td>
+          <td class="text-left"><input [(ngModel)]="artifact.PersonalNotes" value="{{ artifact.PersonalNotes}}"
+              class="outline w-full" />
+          </td>
+        </tr>
+        <tr>
+          <td>Attachments</td>
+          <td class="text-left">
+            <ul>
+              @for (link of artifact["Attachment"]; track link) {
+              <li><a href="{{link}}">{{ link }}</a></li>
+              }
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flex flex-row-reverse">
+    <a [routerLink]="['../../']" class="text-red-500 basis-1/5 cursor-pointer">Close</a>
+    <button (click)="saveComponent()" class="text-blue-500 cursor-pointer">Save</button>
+    <router-outlet />
+  </div>
+</div>
