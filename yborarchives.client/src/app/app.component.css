@@ -1,14 +1,25 @@
-﻿:host {
-    max-width: 1280px;
-    padding: 2rem;
-    text-align: center;
+﻿@import "tailwindcss";
+
+@theme {
+  --color-dark-moss-green: #606c38ff;
+  --color-pakistan-green: #283618ff;
+  --color-cornsilk: #fefae0ff;
+  --color-earth-yellow: #dda15eff;
+  --color-tigers-eye: #bc6c25ff;
 }
 
-th, td {
-    padding-left: 1rem;
-    padding-right: 1rem;
+:host {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+th,
+td {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 table {
-    margin: 0 auto;
+  margin: 0 auto;
 }
