@@ -23,7 +23,7 @@ export class ArtifactEditComponent {
 
   accession: string = "0";
   appData = new Data();
-  artifact: Artifact = this.appData.data.get(this.accession);
+  artifact: Artifact = this.appData.data[0];
   table = {
     "Accession": "Accession",
     "Description": "Description",
@@ -44,7 +44,7 @@ export class ArtifactEditComponent {
   constructor() {
     this.accession = this.route.snapshot.params["accession"];
     if (this.accession != "new") {
-      this.artifact = this.appData.data.get(this.accession);
+      this.artifact = this.appData.data[0];
     }
     else {
       this.artifact = this.appData.getNewArticle()

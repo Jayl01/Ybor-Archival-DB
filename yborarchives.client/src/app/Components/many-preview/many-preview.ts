@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { Artifact } from "../../types";
 import { NgOptimizedImage } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
@@ -15,11 +15,8 @@ import { Data } from '../../Data';
 })
 
 export class ManyPreviewComponent {
-  // this is just a temporary example. will be replaced by api call 
-  data_temp : object = {};
+  inputData = model.required<Artifact[]>();
 
-  data = new Data().data;
-  list_of_keys = Array.from(this.data.keys());
   constructor() {
   }
 }

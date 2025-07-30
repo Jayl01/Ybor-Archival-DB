@@ -23,7 +23,7 @@ export class ArtifactPreviewComponent {
   
   accession: string = "0";
   appData = new Data().data;
-  artifact: Artifact = this.appData.get(this.accession);
+  artifact: Artifact = this.appData[0];
   table = {
     "Accession": "Accession",
     "Description": "Description",
@@ -39,12 +39,10 @@ export class ArtifactPreviewComponent {
   }
   tableKeys = Object.keys(this.table);
   tableValues = Object.values(this.table);
-  
-
 
   route: ActivatedRoute = inject(ActivatedRoute);
   constructor() {
     this.accession = this.route.snapshot.params["accession"];
-    this.artifact = this.appData.get(this.accession);
+    this.artifact = this.appData[0];
   }
 }

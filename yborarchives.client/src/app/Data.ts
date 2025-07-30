@@ -3,8 +3,8 @@ import { Artifact } from "./types";
 export class Data {
 
   // this is just a temporary example. will be replaced by api call 
-  data_temp: object = {
-    "0": {
+  public data: Artifact[] = [
+    {
       "Accession": "0",
       "Title": "test",
       "Location": "RO_BB1",
@@ -16,11 +16,11 @@ export class Data {
       "Condition": "Bad",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": "Broken at the neck of the bottle"
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": "Broken at the neck of the bottle",
     },
-    "2025.01.001": {
+    {
       "Accession": "2025.01.001",
       "Title": "Glass Bottle",
       "Location": "RO_BB1",
@@ -32,11 +32,11 @@ export class Data {
       "Condition": "Bad",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": "Broken at the neck of the bottle"
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": "Broken at the neck of the bottle"
     },
-    "2025.01.002": {
+    {
       "Accession": "2025.01.002",
       "Title": "Oral History - John Doe",
       "Location": "RO_BB1",
@@ -48,11 +48,11 @@ export class Data {
       "Condition": "Fair",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[pdf]",
-      "Notes": "[mp3]"
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": "[mp3]"
     },
-    "2025.01.003": {
+    {
       "Accession": "2025.01.003",
       "Title": "Handwritten Dairy of a Woman's Life",
       "Location": "RO_BB1",
@@ -64,27 +64,27 @@ export class Data {
       "Condition": "62 pgs",
       "Status": "Fair ",
       "DonatedBy": "Donated",
-      "Acquisition": "Jane Doe",
-      "Attachment": "[pdf]",
-      "Notes": "[pdf]"
+      "Acquisition": ["Jane Doe"],
+      "Attachment": [],
+      "PersonalNotes": "[pdf]"
     },
-    "2025.01.004": {
+    {
       "Accession": "2025.01.004",
       "Title": "Baseball Signed by Al Lopez",
       "Location": "RO_BB1",
       "SubjectHeadings": "Baseball in Tampa Bay, Al Lopez, Spanish History",
       "Description": "Baseball signed by major league player Al Lopez.",
-      "Date": 1950,
+      "Date": "1950",
       "CreatedBy": "Rawlings",
       "Size": "9\" circ.",
       "Condition": "Excellent",
       "Status": "Donated ",
       "DonatedBy": "Al Lopez",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.005": {
+    {
       "Accession": "2025.01.005",
       "Title": "Painting of Ybor Street",
       "Location": "RO_BB1",
@@ -96,11 +96,11 @@ export class Data {
       "Condition": "Excellent",
       "Status": "Donated",
       "DonatedBy": "Arnold Martinez",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.006": {
+    {
       "Accession": "2025.01.006",
       "Title": "Wooden Cigar Mold",
       "Location": "RO_BB1",
@@ -112,11 +112,11 @@ export class Data {
       "Condition": "Fair ",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.007": {
+    {
       "Accession": "2025.01.007",
       "Title": "Spanish Madre\u00f1as",
       "Location": "RO_BB1",
@@ -128,11 +128,11 @@ export class Data {
       "Condition": "Good",
       "Status": "Donated",
       "DonatedBy": "N/A",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.008": {
+    {
       "Accession": "2025.01.008",
       "Title": "WPA Blueprints for House",
       "Location": "RO_BB1",
@@ -144,11 +144,11 @@ export class Data {
       "Condition": "Bad",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.009": {
+    {
       "Accession": "2025.01.009",
       "Title": "Centro Asturiano Membership Card Book",
       "Location": "RO_BB1",
@@ -160,27 +160,27 @@ export class Data {
       "Condition": "Poor",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": "Very delicate, binding fragile"
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": "Very delicate, binding fragile"
     },
-    "2025.01.010": {
+    {
       "Accession": "2025.01.010",
       "Title": "2021 Annual Cigar Heritage Festival Poster",
       "Location": "RO_BB1",
       "SubjectHeadings": "Cigar Industry, Ybor City Festivals",
       "Description": "Medium sized poster to promote the 2021 Annual Cigar Heritage Festival",
-      "Date": 2021,
+      "Date": "2021",
       "CreatedBy": "Ybor City Museum Society, Cigar Heritage Festival",
       "Size": "18\"x24\"",
       "Condition": "Good",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.011": {
+    {
       "Accession": "2025.01.011",
       "Title": "Burgert Brothers photograph of women at work in the cigar industry",
       "Location": "RO_BB1",
@@ -192,30 +192,28 @@ export class Data {
       "Condition": "Good",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[jpeg]",
-      "Notes": null
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
     },
-    "2025.01.012": {
+    {
       "Accession": "2025.01.012",
       "Title": "Krewe of Ybor Recods",
       "Location": "RO_BB1",
       "SubjectHeadings": "Krewe, Ybor Culture",
       "Description": "Documents about membership information for the Krewe of Ybor",
-      "Date": 2000,
+      "Date": "2000",
       "CreatedBy": "Krewe of Ybor",
       "Size": "N/A",
       "Condition": "Fair",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": "[pdf]",
-      "Attachment": "[pdf]",
-      "Notes": null
-    }
-  };
+      "Acquisition": [],
+      "Attachment": [],
+      "PersonalNotes": ""
+      }
+  ];
 
-  public data = new Map(Object.entries(this.data_temp));
-  public list_of_keys = Array.from(this.data.keys());
   constructor() {
   }
 
@@ -241,6 +239,5 @@ export class Data {
       "CreatedBy": "",
       "PersonalNotes": ""
     }
-  };
-
+  }
 }

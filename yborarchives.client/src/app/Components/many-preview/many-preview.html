@@ -1,11 +1,12 @@
 <div class="flex flex-row flex-wrap justify-center-safe  p-10 z-5">
-  @for (key of list_of_keys; track key) {
-  <a [routerLink]="['/artifact-preview', data.get(key).Accession]"
-    class="aspect-square basis-80 m-4 p-5 leading-8 rounded-xl border-2 border-pakistan-green ">
-    <h1 class="text-2xl font-semibold text-center">{{data.get(key).Title }}</h1>
-    <p class="text-center">{{data.get(key).Description}}</p>
-    <p class="text-center font-thin">{{data.get(key).SubjectHeadings}}</p>
+  @for (artifact of inputData(); track artifact) {
+  <a [routerLink]="['/artifact-preview', artifact.Accession]"
+     class="aspect-square basis-80 m-4 p-5 leading-8 rounded-xl border-2 border-pakistan-green ">
+    <h1 class="text-2xl font-semibold text-center">{{artifact.Title}}</h1>
+    <p class="text-center">{{artifact.Description}}</p>
+    <p class="text-center font-thin">{{artifact.SubjectHeadings}}</p>
   </a>
+
   }
 
 </div>
