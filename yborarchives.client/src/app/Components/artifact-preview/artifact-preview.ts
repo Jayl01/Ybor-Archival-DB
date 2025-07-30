@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Artifact } from "../../types";
 import { NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { Bridge } from '../../bridge';
+import { Data } from '../../Data';
 import { RouterOutlet, RouterLink } from '@angular/router'
 
 @Component({
@@ -13,7 +13,6 @@ import { RouterOutlet, RouterLink } from '@angular/router'
   imports: [RouterOutlet, RouterLink],
 
 })
-
 export class ArtifactPreviewComponent {
 
   edit : boolean = false;
@@ -23,10 +22,10 @@ export class ArtifactPreviewComponent {
   }
   
   accession: string = "0";
-  bridge = new Bridge().data
-  artifact: Artifact = this.bridge.get(this.accession);
+  appData = new Data().data;
+  artifact: Artifact = this.appData.get(this.accession);
   table = {
-    "Accession":"Accession",
+    "Accession": "Accession",
     "Description": "Description",
     "SubjectHeadings": "Subjects",
     "Location": "Location",
@@ -46,7 +45,6 @@ export class ArtifactPreviewComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   constructor() {
     this.accession = this.route.snapshot.params["accession"];
-    this.artifact = this.bridge.get(this.accession);
+    this.artifact = this.appData.get(this.accession);
   }
-
 }

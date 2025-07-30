@@ -1,3 +1,4 @@
-  <input class="mt-[50%] w-200" type="text" id="searchbar" [(ngModel)]="searchName">
-  <button class="button" type="submit" placeholder="Enter information" (click)="onSubmit()">Search</button>
-  <h1>{{ searchName }}</h1>
+<div>
+  <input class="w-40 border-solid border-1 form-control" type="text" id="searchbar" placeholder="Enter artifact name" (input)="formChange($event)" #searchValue>
+  <button class="button ml-2 p-1 border-1" type="submit" placeholder="Enter information" (click)="onSubmit(searchValue.value)">Search</button>
+</div>

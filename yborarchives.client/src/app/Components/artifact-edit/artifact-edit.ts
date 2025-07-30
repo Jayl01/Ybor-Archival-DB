@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Artifact } from "../../types";
 import { NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { Bridge } from '../../bridge';
+import { Data } from '../../Data';
 import { RouterOutlet, RouterLink } from '@angular/router'
 import { FormsModule } from '@angular/forms';
 
@@ -17,15 +17,13 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class ArtifactEditComponent {
-
-
   saveComponent() {
-    this.bridge.updateArtifact(this.artifact);
+    this.appData.updateArtifact(this.artifact);
   }
 
   accession: string = "0";
-  bridge = new Bridge()
-  artifact: Artifact = this.bridge.data.get(this.accession);
+  appData = new Data();
+  artifact: Artifact = this.appData.data.get(this.accession);
   table = {
     "Accession": "Accession",
     "Description": "Description",
@@ -42,16 +40,14 @@ export class ArtifactEditComponent {
   tableKeys = Object.keys(this.table);
   tableValues = Object.values(this.table);
 
-
-
   route: ActivatedRoute = inject(ActivatedRoute);
   constructor() {
     this.accession = this.route.snapshot.params["accession"];
     if (this.accession != "new") {
-      this.artifact = this.bridge.data.get(this.accession);
+      this.artifact = this.appData.data.get(this.accession);
     }
     else {
-      this.artifact = this.bridge.getNewArticle()
+      this.artifact = this.appData.getNewArticle()
     }
   }
 

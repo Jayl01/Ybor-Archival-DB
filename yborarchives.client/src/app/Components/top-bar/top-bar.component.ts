@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Searchbar } from '../SearchBar/Searchbar';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.css',
-  imports: [RouterLink, RouterOutlet]
+  imports: [RouterLink, RouterOutlet, Searchbar]
 })
 export class TopBarComponent {
   new = "new";

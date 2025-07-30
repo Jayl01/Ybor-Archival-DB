@@ -1,6 +1,6 @@
 import { Artifact } from "./types";
 
-export class Bridge {
+export class Data {
 
   // this is just a temporary example. will be replaced by api call 
   data_temp: object = {
