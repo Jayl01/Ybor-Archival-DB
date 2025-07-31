@@ -1,71 +1,77 @@
 <div class="bg-gray-100 opacity-50 h-screen w-screen top-0 left-0 fixed transition delay-450 duration-300 ease-in-out"
   [routerLink]="['../../']">
 </div>
-<div class="shadow-lg w-1/2 gap-9 p-5 fixed inset-1/4 bg-white h-fit rounded-xl border">
+<div class="shadow-lg w-1/2 h-7/8 gap-9 p-5 fixed inset-x-1/4 inset-y-0 mt-10 mb-20 bg-white rounded-xl border overflow-x-hidden overflow-y-scroll overscroll-contain z-50">
   <div class="flex flex-col content-center">
-    <img width="256" height="256" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM_1tq1C29xUImDGvIsx01T9E7Z6yLyD--1w&s"/>
-    <h1 class="text-2xl font-semibold">{{ artifact["Title"] }}</h1>
+    @if (artifactHasImages) {
+      <div class="flex items-center justify-center">
+        <button class="border h-8 hover:bg-gray-200" (click)="previousImgPressed()">Previous Image</button>
+        <img class="place-self-center" width="256" height="256" src="{{activeImageLink}}" />
+        <button class="border h-8 hover:bg-gray-200" (click)="nextImgPressed()">Next Image</button>
+      </div>
+    }
+    @else {}
+    <h1 class="text-4xl pb-4 font-semibold">{{ artifact["Title"] }}</h1>
 
-    <div class="flex justify-center  gap-5">
-      @for (photo of artifact["Acquisition"]; track photo) {
+    <div class="flex justify-center gap-5">
+      @for (photo of artifact["Acquisitions"]; track photo) {
 
       <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
       }
 
     </div>
 
-
-    <table class="table-auto">
+    <table class="w-full">
       <tbody>
-        <tr>
-          <td>Accession</td>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
+          <td class="w-40">Accession</td>
           <td class="text-left">{{ artifact["Accession"] }} </td>
         </tr>
-        <tr>
+        <tr class="w-40 h-2 border-b-1 hover:bg-gray-200">
           <td>Description</td>
-          <td class="text-left">{{ artifact["Description"] }} </td>
+          <td class="text-left text-pretty">{{ artifact["Description"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Subject</td>
           <td class="text-left">{{ artifact["SubjectHeadings"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Location</td>
           <td class="text-left">{{ artifact["Location"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Date</td>
           <td class="text-left">{{ artifact["Date"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Created By</td>
           <td class="text-left">{{ artifact["CreatedBy"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Size</td>
           <td class="text-left">{{ artifact["Size"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Condition</td>
           <td class="text-left">{{ artifact["Condition"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Status</td>
           <td class="text-left">{{ artifact["Status"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Donated By</td>
           <td class="text-left">{{ artifact["DonatedBy"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Notes</td>
           <td class="text-left">{{ artifact["PersonalNotes"] }} </td>
         </tr>
-        <tr>
+        <tr class="border-b-1 mt-8 hover:bg-gray-200">
           <td>Attachments</td>
           <td class="text-left">
             <ul>
-              @for (link of artifact["Attachment"]; track link) {
+              @for (link of artifact["Attachments"]; track link) {
               <li><a href="{{link}}">{{ link }}</a></li>
               }
             </ul>
@@ -75,8 +81,8 @@
     </table>
   </div>
   <div class="flex flex-row-reverse">
-    <a [routerLink]="['../../']" class="text-red-500 basis-1/5 cursor-pointer">Close</a>
-    <a [routerLink]="['/artifact-edit', artifact.Accession]" class="text-blue-500 cursor-pointer">Edit</a>
+    <a [routerLink]="['../../']" class="text-red-500 basis-1/5 cursor-pointer hover:text-red-800">Close</a>
+    <a [routerLink]="['/artifact-edit', artifact.Accession]" class="text-blue-500 cursor-pointer hover:text-blue-800">Edit</a>
     <router-outlet />
   </div>
 </div>

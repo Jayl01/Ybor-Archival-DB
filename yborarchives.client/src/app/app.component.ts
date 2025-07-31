@@ -40,12 +40,21 @@ export class MainAppComponent implements OnInit {
   }
 
   searchBarUpdated(value: string): void {
-    console.log(this);
     if (this == null || this.data == null)
       return;
 
     this.listedData = this.data.filter( (artifact) => {
-      return artifact.Title.toLowerCase().includes(value.toLowerCase());
+      return artifact.Title.toLowerCase().includes(value.toLowerCase())
+        || artifact.Description.toLowerCase().includes(value.toLowerCase())
+        || artifact.CreatedBy.toLowerCase().includes(value.toLowerCase())
+        || artifact.SubjectHeadings.toLowerCase().includes(value.toLowerCase())
+        || artifact.Location.toLowerCase().includes(value.toLowerCase())
+        || artifact.Size.toLowerCase().includes(value.toLowerCase())
+        || artifact.DonatedBy.toLowerCase().includes(value.toLowerCase())
+        || artifact.Accession.includes(value)
+        || artifact.Condition.includes(value)
+        || artifact.Status.includes(value)
+        || artifact.Date.includes(value)
       }
     );
   }

@@ -4,22 +4,23 @@ export class Data {
 
   // this is just a temporary example. will be replaced by api call 
   public data: Artifact[] = [
-    {
+    /*{
       "Accession": "0",
       "Title": "test",
       "Location": "RO_BB1",
       "SubjectHeadings": "Food, Markets, Medicine",
-      "Description": "Small glass bottle without a cap.",
+      "Description": "Small glass bottle without a cap.GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
       "Date": "1950s",
       "CreatedBy": "Glass Bottleworks",
       "Size": "2\"x6\"",
       "Condition": "Bad",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
       "PersonalNotes": "Broken at the neck of the bottle",
-    },
+      "Acquisitions": [],
+      "Attachments": [],
+      Images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM_1tq1C29xUImDGvIsx01T9E7Z6yLyD--1w&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDLERXiIT9-kSikgAj-wKTG_N5yNO9GOFIIQ&s"]
+    },*/
     {
       "Accession": "2025.01.001",
       "Title": "Glass Bottle",
@@ -32,9 +33,10 @@ export class Data {
       "Condition": "Bad",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": "Broken at the neck of the bottle"
+      "PersonalNotes": "Broken at the neck of the bottle",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.002",
@@ -48,9 +50,10 @@ export class Data {
       "Condition": "Fair",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": "[mp3]"
+      "PersonalNotes": "[mp3]",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.003",
@@ -64,9 +67,10 @@ export class Data {
       "Condition": "62 pgs",
       "Status": "Fair ",
       "DonatedBy": "Donated",
-      "Acquisition": ["Jane Doe"],
-      "Attachment": [],
-      "PersonalNotes": "[pdf]"
+      "PersonalNotes": "[pdf]",
+      "Acquisitions": ["Jane Doe"],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.004",
@@ -80,9 +84,10 @@ export class Data {
       "Condition": "Excellent",
       "Status": "Donated ",
       "DonatedBy": "Al Lopez",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.005",
@@ -96,9 +101,10 @@ export class Data {
       "Condition": "Excellent",
       "Status": "Donated",
       "DonatedBy": "Arnold Martinez",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.006",
@@ -112,9 +118,10 @@ export class Data {
       "Condition": "Fair ",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": ["https://img.freepik.com/free-psd/closeup-partially-smoked-cigar_191095-81614.jpg", "https://t3.ftcdn.net/jpg/01/15/15/80/360_F_115158009_RSXCLoEYhSWdOQpPkg2GTnlVH1feSlik.jpg", "https://mshanken.imgix.net/cao/bolt/2019-02/10-things-graphic-1600.jpg?w=900&q=72"]
     },
     {
       "Accession": "2025.01.007",
@@ -128,9 +135,10 @@ export class Data {
       "Condition": "Good",
       "Status": "Donated",
       "DonatedBy": "N/A",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.008",
@@ -144,9 +152,10 @@ export class Data {
       "Condition": "Bad",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.009",
@@ -160,9 +169,10 @@ export class Data {
       "Condition": "Poor",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": "Very delicate, binding fragile"
+      "PersonalNotes": "Very delicate, binding fragile",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.010",
@@ -176,9 +186,10 @@ export class Data {
       "Condition": "Good",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.011",
@@ -192,9 +203,10 @@ export class Data {
       "Condition": "Good",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
     },
     {
       "Accession": "2025.01.012",
@@ -208,9 +220,10 @@ export class Data {
       "Condition": "Fair",
       "Status": "Donated",
       "DonatedBy": "John Doe",
-      "Acquisition": [],
-      "Attachment": [],
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": []
       }
   ];
 
@@ -234,10 +247,11 @@ export class Data {
       "Condition": "",
       "Status": "",
       "DonatedBy": "",
-      "Acquisition": [],
-      "Attachment": [],
       "CreatedBy": "",
-      "PersonalNotes": ""
+      "PersonalNotes": "",
+      "Acquisitions": [],
+      "Attachments": [],
+      "Images": [],
     }
   }
 }

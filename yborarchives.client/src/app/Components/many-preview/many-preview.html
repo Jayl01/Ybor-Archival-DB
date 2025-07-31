@@ -1,13 +1,13 @@
-<div class="flex flex-row flex-wrap justify-center-safe  p-10 z-5">
+<div class="flex flex-row flex-wrap justify-center-safe p-10 z-5">
   @for (artifact of inputData(); track artifact) {
-  <a [routerLink]="['/artifact-preview', artifact.Accession]"
-     class="aspect-square basis-80 m-4 p-5 leading-8 rounded-xl border-2 border-pakistan-green ">
-    <h1 class="text-2xl font-semibold text-center">{{artifact.Title}}</h1>
-    <p class="text-center">{{artifact.Description}}</p>
-    <p class="text-center font-thin">{{artifact.SubjectHeadings}}</p>
-  </a>
-
+    <a [routerLink]="['/artifact-preview', artifact.Accession]"
+       class="aspect-square w-60 h-60 basis-80 m-4 p-5 leading-8 rounded-xl border-2 border-pakistan-green hover:bg-gray-100">
+        @if (artifact.Images.length > 0) {
+        <img class="place-self-center" width="86" height="86" src="{{artifact.Images[0]}}" /> }
+        <h1 class="text-2xl font-semibold text-center">{{artifact.Title}}</h1>
+        <p class="text-center truncate">{{artifact.Description}}</p>
+        <p class="text-center font-thin truncate">{{artifact.SubjectHeadings}}</p>
+    </a>
   }
-
 </div>
 <router-outlet />

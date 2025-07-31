@@ -25,7 +25,7 @@ export class ArtifactEditComponent {
   appData = new Data();
   artifact: Artifact = this.appData.data[0];
   table = {
-    "Accession": "Accession",
+    "Accessions": "Accession",
     "Description": "Description",
     "SubjectHeadings": "Subjects",
     "Location": "Location",
@@ -35,7 +35,8 @@ export class ArtifactEditComponent {
     "Condition": "Condition",
     "Status": "Status",
     "DonatedBy": "Donated By",
-    "PersonalNotes": "Notes"
+    "PersonalNotes": "Notes",
+    "Images": []
   }
   tableKeys = Object.keys(this.table);
   tableValues = Object.values(this.table);

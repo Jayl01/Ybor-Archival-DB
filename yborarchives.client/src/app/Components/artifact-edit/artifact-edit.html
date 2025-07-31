@@ -7,7 +7,7 @@
         class="outline" /></h1>
 
     <div class="flex justify-center  gap-5">
-      @for (photo of artifact["Acquisition"]; track photo) {
+      @for (photo of artifact["Acquisitions"]; track photo) {
 
       <!-- <img class="h-70 place-content-center" src="{{photo}}" /> -->
       }
@@ -80,7 +80,7 @@
           <td>Attachments</td>
           <td class="text-left">
             <ul>
-              @for (link of artifact["Attachment"]; track link) {
+              @for (link of artifact["Attachments"]; track link) {
               <li><a href="{{link}}">{{ link }}</a></li>
               }
             </ul>

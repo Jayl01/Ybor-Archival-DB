@@ -11,8 +11,9 @@ export interface Artifact {
   Condition: string;
   Status: string;
   DonatedBy: string;
-  Acquisition: string[];
-  Attachment: string[];
+  Acquisitions: string[];
+  Attachments: string[];
+  Images: string[];
 }
 
 export function ToPrint()

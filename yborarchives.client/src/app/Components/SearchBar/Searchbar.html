@@ -1,4 +1,4 @@
 <div>
-  <input class="w-40 border-solid border-1 form-control" type="text" id="searchbar" placeholder="Enter artifact name" (input)="formChange($event)" #searchValue>
-  <button class="button ml-2 p-1 border-1" type="submit" placeholder="Enter information" (click)="onSubmit(searchValue.value)">Search</button>
+  <input class="w-[50%] border-solid border-1 form-control" type="text" placeholder="Enter artifact name, date, description, or any relevant information..." (input)="formChange($event)" #searchValue>
+  <button class="button ml-2 p-1 border-1" (click)="onSubmit(searchValue.value)">Search</button>
 </div>

@@ -20,29 +20,38 @@ export class ArtifactPreviewComponent {
   editComponent(){
     this.edit=true;
   }
-  
+
+  artifactHasImages = false;
+  activeImageLink = "";
+  activeImageIndex = 0;
   accession: string = "0";
   appData = new Data().data;
-  artifact: Artifact = this.appData[0];
-  table = {
-    "Accession": "Accession",
-    "Description": "Description",
-    "SubjectHeadings": "Subjects",
-    "Location": "Location",
-    "Date": "Date",
-    "CreatedBy": "Created By",
-    "Size": "Size",
-    "Condition": "Condition",
-    "Status": "Status",
-    "DonatedBy": "Donated By",
-    "PersonalNotes": "Notes"
-  }
-  tableKeys = Object.keys(this.table);
-  tableValues = Object.values(this.table);
+  artifact: Artifact;
 
   route: ActivatedRoute = inject(ActivatedRoute);
-  constructor() {
+
+  constructor() {   //later on, this needs to be optimized because we make a clone of all data here which is bad for power optimization
     this.accession = this.route.snapshot.params["accession"];
-    this.artifact = this.appData[0];
+    this.artifact = this.appData.filter((artifact) => artifact.Accession == this.accession)[0];
+    this.artifactHasImages = this.artifact.Images ? this.artifact.Images.length > 0 : false;
+    this.activeImageLink = this.artifact.Images ? this.artifact.Images[0] : "";
+  }
+
+  previousImgPressed(): void {
+    if (this.activeImageIndex > 0)
+      this.activeImageIndex -= 1;
+    else
+      this.activeImageIndex = this.artifact.Images.length - 1;
+
+    this.activeImageLink = this.artifact.Images[this.activeImageIndex];
+  }
+
+  nextImgPressed(): void {
+    if (this.activeImageIndex < this.artifact.Images.length - 1)
+      this.activeImageIndex += 1;
+    else
+      this.activeImageIndex = 0;
+
+    this.activeImageLink = this.artifact.Images[this.activeImageIndex];
   }
 }
